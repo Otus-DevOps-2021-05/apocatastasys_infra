@@ -18,3 +18,7 @@ Host distanthost
   User appuser
 
 COMMENT
+
+
+bastion_IP = 178.154.203.2
+someinternalhost_IP = 10.128.0.19
