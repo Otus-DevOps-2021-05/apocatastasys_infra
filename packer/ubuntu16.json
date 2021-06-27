@@ -1,0 +1,34 @@
+{
+  "variables": {
+    "svc_key_file": "{{env `YC_SERVICE_ACCOUNT_KEY_FILE`}}",
+    "image_id": "{{user `source_image_id`}}",
+    "subnet": "{{user `yc_subnet`}}",
+    "folder_id": "{{env `YC_FOLDER`}}"
+  },
+    "builders": [
+        {
+            "type": "yandex",
+            "service_account_key_file": "{{user `svc_key_file`}}",
+            "folder_id": "{{user `folder_id`}}",
+            "source_image_id": "{{user `image_id`}}",
+            "image_name": "reddit-base-{{timestamp}}",
+            "image_family": "reddit-base",
+            "use_ipv4_nat": true,
+            "subnet_id": "{{user `subnet`}}",
+            "ssh_username": "ubuntu",
+            "platform_id": "standard-v2"
+        }
+    ],
+    "provisioners": [
+{
+            "type": "shell",
+            "script": "scripts/install_ruby.sh",
+            "execute_command": "sudo {{.Path}}"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/install_mongodb.sh",
+            "execute_command": "sudo {{.Path}}"
+         }
+      ]
+}
