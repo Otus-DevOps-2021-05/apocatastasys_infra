@@ -1,8 +1,8 @@
 {
   "variables": {
     "svc_key_file": "{{env `YC_SERVICE_ACCOUNT_KEY_FILE`}}",
-    "image_id": "{{user `source_image_id`}}",
-    "subnet": "{{user `yc_subnet`}}",
+    "image_id": "{{`source_image_id`}}",
+    "subnet": "{{`yc_subnet`}}",
     "folder_id": "{{env `YC_FOLDER`}}"
   },
     "builders": [

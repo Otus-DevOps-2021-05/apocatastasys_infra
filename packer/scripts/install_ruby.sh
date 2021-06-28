@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
-sudo apt --assume-yes update
-sudo apt --assume-yes install -y ruby-full ruby-bundler build-essential
+#sudo rm /var/lib/apt/lists/lock
+#sudo rm /var/cache/apt/archives/lock
+#sudo rm /var/lib/dpkg/lock*
+#sudo dpkg --configure -a
+apt-get update
+apt-get install -y ruby-full ruby-bundler build-essential
