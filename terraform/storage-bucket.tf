@@ -1,11 +1,18 @@
-provider "google" { version = "1.4.0"
-project = "${var.project}" region = "${var.region}"
+provider "google" {
+  version = "~> 2.15"
+  project = var.project
+  region  = var.region
 }
+
 module "storage-bucket" {
-source = "SweetOps/storage-bucket/google"
-version = "0.1.1"
-name = ["storage-bucket-test", "storage-bucket-test2"]
+  source  = "SweetOps/storage-bucket/google"
+  version = "0.3.0"
+
+  # Имя поменяйте на другое
+  name = "storage-bucket-test-sgremyachikh"
+  location = var.region
 }
+
 output storage-bucket_url {
-value = "${module.storage-bucket.url}"
+  value = module.storage-bucket.url
 }
