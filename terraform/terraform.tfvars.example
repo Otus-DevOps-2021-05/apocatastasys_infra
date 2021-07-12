@@ -1,0 +1,7 @@
+cloud_id                 = "b1gpveq0hgu2jtpdmnj8"
+folder_id                = "b1ggs1k8rekvikjdrr58"
+zone                     = "ru-central1-a"
+image_id                 = "fd8vt1h0lousse76au7b"
+public_key_path          = "/home/ubuntu/.ssh/ubuntu.pub"
+subnet_id                = "e9bqani93meifk8riqho"
+service_account_key_file = "/root/key.json"
