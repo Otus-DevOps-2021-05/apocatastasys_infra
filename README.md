@@ -29,4 +29,5 @@ someinternalhost_IP = 10.128.0.19
 testapp_IP = 178.154.252.120
 testapp_port = 9292
 
-
+ДЗ№9
+Сделано основное ДЗ по теме ansible-2
