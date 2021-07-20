@@ -1,0 +1,35 @@
+описание задания
+В моем случае, при выполнении команд:
+ansible-playbook clone.yml удалении репозитория и повторном выполнении команды ansible-playbook clone.yml разницы не было -
+
+
+[root@centos7vm ansible]# ansible-playbook clone.yml
+
+PLAY [Clone] *********************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************
+ok: [appserver]
+
+TASK [Clone repo] ****************************************************************************************************************************************************
+changed: [appserver]
+
+PLAY RECAP ***********************************************************************************************************************************************************
+appserver                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+[root@centos7vm ansible]# ansible app -m command -a 'rm -rf ~/reddit'
+[WARNING]: Consider using the file module with state=absent rather than running 'rm'.  If you need to use command because file is insufficient you can add 'warn:
+false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+appserver | CHANGED | rc=0 >>
+
+[root@centos7vm ansible]# ansible-playbook clone.yml
+
+PLAY [Clone] *********************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************************************************************
+ok: [appserver]
+
+TASK [Clone repo] ****************************************************************************************************************************************************
+changed: [appserver]
+
+PLAY RECAP ***********************************************************************************************************************************************************
+appserver                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
