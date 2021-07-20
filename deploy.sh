@@ -5,5 +5,3 @@ cd reddit && bundle install
 
 puma -d
 
-
-

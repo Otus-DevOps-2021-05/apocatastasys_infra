@@ -1,6 +1,7 @@
 # apocatastasys_infra
 apocatastasys Infra repository
 
+=======
 
 #ssh -J appuser@178.154.203.2 appuser@10.128.0.19
 
@@ -20,6 +21,15 @@ Host distanthost
 
 COMMENT
 
+
+
+bastion_IP = 178.154.203.2
+someinternalhost_IP = 10.128.0.19
+=======
+testapp_IP = 178.154.252.120
+testapp_port = 9292
+
+=======
 bastion_IP = 178.154.203.2
 someinternalhost_IP = 10.128.0.19
 
@@ -29,5 +39,9 @@ someinternalhost_IP = 10.128.0.19
 testapp_IP = 178.154.252.120
 testapp_port = 9292
 
+ ansible-3
 Сделано основное ДЗ№10 
+=======
+#Сделано основное ДЗ по теме terraform-2
+ main
 
