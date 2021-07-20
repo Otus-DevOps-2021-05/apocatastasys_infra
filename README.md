@@ -39,5 +39,9 @@ someinternalhost_IP = 10.128.0.19
 testapp_IP = 178.154.252.120
 testapp_port = 9292
 
+ ansible-3
+Сделано основное ДЗ№10 
+=======
 #Сделано основное ДЗ по теме terraform-2
+ main
 
